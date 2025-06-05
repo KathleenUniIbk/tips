@@ -160,9 +160,9 @@
             //Reset View
             L.control.resetView({
         position: "topleft",
-        title: "Reset view",
-        latlng: L.latLng([51.505, -0.09]),
-        zoom: 13,
+        title: "Startview anzeigen",
+        latlng: map.getCenter(),
+        zoom: map.getZoom(),
     }).addTo(map);
     </script>
 </body>
