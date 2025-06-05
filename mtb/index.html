@@ -129,7 +129,8 @@
         async function loadGeoJSON(url) {
             let response = await fetch(url);
             let geojson = await response.json();
-L.geoJSON(geojson).addTo(map);
+            let mtblayer = L.geoJSON(geojson).addTo(map);
+            map.fitBounds(mtblayer.getBounds());
         }
         loadGeoJSON("tafeln.geojson");
 
